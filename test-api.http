@@ -1,0 +1,26 @@
+// register
+POST  http://localhost:3333/auth/signup
+content-type: application/json
+
+{
+  "email": "taronguyen@gmail.com",
+  "password": "1234",
+  "firstName": "Taro",
+  "lastName": "Nguyen"
+}
+
+###
+
+// login
+POST http://localhost:3333/auth/signin
+content-type: application/json
+
+{
+  "email": "taringuyen@gmail.com",
+  "password": "1234"
+}
+
+###
+GET http://localhost:3333/users/me
+content-type: application/json
+Authorization: Bearer abcd
