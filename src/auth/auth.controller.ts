@@ -15,7 +15,7 @@ export class AuthController {
 
   @HttpCode(HttpStatus.OK)
   @Post('/signin')
-  signin(@Body() userDto: UserDto) {
+  signin(@Body() userDto: Omit<UserDto, 'firstName' | 'lastName'>) {
     return this.authService.signin(userDto);
   }
 }

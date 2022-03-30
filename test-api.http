@@ -16,11 +16,21 @@ POST http://localhost:3333/auth/signin
 content-type: application/json
 
 {
-  "email": "taringuyen@gmail.com",
+  "email": "taronguyen@gmail.com",
   "password": "1234"
 }
 
 ###
 GET http://localhost:3333/users/me
 content-type: application/json
-Authorization: Bearer abcd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGFyb25ndXllbkBnbWFpbC5jb20iLCJpYXQiOjE2NDg0NTAyOTcsImV4cCI6MTY0ODQ1MDg5N30.u9U_HTW2GLnzyQJqdPAn_LZSoRjGy2n-g4WVryYTAVk
+
+###
+PUT http://localhost:3333/users/1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGFyb25ndXllbkBnbWFpbC5jb20iLCJpYXQiOjE2NDg0NTA5OTQsImV4cCI6MTY0ODQ1MTU5NH0.xkCrM9PywRTTOtg65miecRObR46K5JsmSMvGlsbI7QY
+
+{
+  "firstName": "Taro1",
+  "lastName": "Nguyen1"
+}
